@@ -1,0 +1,49 @@
+@import "variables";
+@import "fonts";
+
+html {
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 14px;
+  color: $black;
+}
+
+h1 {
+  font-family: "Exo2.0-Thin", sans-serif;
+}
+
+*, *:after, *:before {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: $black url("../static/images/bg.jpg") no-repeat center fixed;
+  background-size: cover;
+}
+
+main {
+  display: block;
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1120px;
+  min-width: 340px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
