@@ -89,13 +89,15 @@ class ProductItem extends PureComponent {
       selected,
       hovered,
       disabled: !product.inStock,
+      [`${category}`]: true,
     });
 
     return (
       <div className={productItemClass}>
+        <div className="product-item--border" />
         { /* eslint-disable-next-line jsx-a11y/mouse-events-have-key-events */ }
         <div
-          className={classNames({ 'product-item--pack': true, [`${category}`]: true })}
+          className="product-item--content"
           onClick={this.handleClick}
           onMouseOver={this.handleMouseOver}
           onMouseOut={this.handleMouseOut}

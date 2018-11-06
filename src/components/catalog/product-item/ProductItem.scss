@@ -1,46 +1,71 @@
 @import "../../../../styles/variables";
 
+@mixin border-color($color) {
+  background: linear-gradient(135deg, transparent 30px, $color 30px);
+}
+
 .product-item {
   position: relative;
   margin-bottom: 45px;
-}
-
-.product-item--pack {
-  position: relative;
   width: 320px;
   height: 480px;
-  padding: 25px 50px;
-  cursor: pointer;
-  background-color: transparent;
-  background-image: url("../../../../static/images/default.png"),
-                    url("../../../../static/images/selected.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+}
+
+.product-item--border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+
+  @include border-color($blue);
+
+  .hovered & {
+    @include border-color($blueHover);
+  }
 
   .selected & {
-    background-image: url("../../../../static/images/selected.png");
+    @include border-color($pink);
+  }
+
+  .selected.hovered & {
+    @include border-color($pinkHover);
   }
 
   .disabled & {
-    background-image: url("../../../../static/images/disabled.png");
-    cursor: not-allowed;
+    @include border-color($gray);
   }
+}
 
-  &.cats {
+.product-item--content {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 312px;
+  height: 472px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, transparent 29px, $light-gray 29px);
+  padding: 25px 50px;
+
+  .cats & {
     &:after {
       content: "";
       width: 100%;
       height: 270px;
       position: absolute;
-      bottom: 4px;
-      left: 4px;
+      bottom: 0;
+      left: 0;
       border-bottom-left-radius: 8px;
       background: transparent url("../../../../static/images/cat.png") no-repeat top center;
+    }
+  }
 
-      .disabled & {
-        opacity: 0.5;
-      }
+  .cats.disabled & {
+    cursor: not-allowed;
+
+    &:after {
+      opacity: 0.5;
     }
   }
 }
@@ -57,7 +82,7 @@
   font-size: 16px;
 
   .selected.hovered & {
-    color: lighten($pink, 8%);
+    color: $pinkHover;
   }
 }
 
@@ -99,7 +124,7 @@
   z-index: 10;
 
   .hovered & {
-    background-color: lighten($blue, 8%);
+    background-color: $blueHover;
   }
 
   .selected & {
@@ -107,7 +132,7 @@
   }
 
   .selected.hovered & {
-    background-color: lighten($pink, 8%);
+    background-color: $pinkHover;
   }
 
   .disabled & {
@@ -146,7 +171,7 @@
     cursor: pointer;
 
     .hovered & {
-      color: lighten($blue, 8%);
+      color: $blueHover;
     }
   }
 }
