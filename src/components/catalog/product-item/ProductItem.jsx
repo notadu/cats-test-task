@@ -109,10 +109,10 @@ class ProductItem extends PureComponent {
           <ul className="product-item--text product-item--details">
             {product.details.map(item => <li>{item}</li>)}
           </ul>
-          <div className="product-item--weight">
+          <span className="product-item--weight">
             {product.weight}
             <small>кг</small>
-          </div>
+          </span>
         </div>
         <div className="product-item--foot-text">{this.renderFootText()}</div>
       </div>

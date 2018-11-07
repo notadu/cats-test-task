@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --config webpack.config.dev.js",
+    "dev": "webpack-dev-server --config webpack.config.dev.js --history-api-fallback",
     "build": "webpack --config webpack.config.prod.js --progress --colors",
     "prod": "node scripts/server.js",
     "postinstall": "npm run build"
@@ -16,7 +16,9 @@
     "express": "^4.16.4",
     "prop-types": "^15.6.2",
     "react": "^16.6.0",
-    "react-dom": "^16.6.0"
+    "react-dom": "^16.6.0",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1"
   },
   "devDependencies": {
     "autoprefixer": "^9.3.1",

@@ -1,14 +1,10 @@
 import React from 'react';
 
-import Catalog from './components/catalog/Catalog';
+import Main from './components/main/Main';
 
 const App = () => (
   <div className="app">
-    <main>
-      <div className="container">
-        <Catalog />
-      </div>
-    </main>
+    <Main />
   </div>
 );
 

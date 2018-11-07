@@ -1,0 +1,19 @@
+@import "../../../styles/variables";
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav--item {
+  margin: 0 20px;
+  padding: 10px;
+  color: $white;
+  border: 1px solid $white;
+  background-color: transparentize($white, 0.8);
+
+  &:hover {
+    background-color: transparentize($white, 0.6);
+  }
+}
