@@ -78,7 +78,6 @@
 
 .product-item--top-text {
   margin-bottom: 10px;
-  color: $dark-gray;
   font-size: 16px;
 
   .selected.hovered & {
@@ -102,7 +101,6 @@
   margin-top: 15px;
 
   li {
-    color: $dark-gray;
     line-height: 16px;
   }
 }
@@ -119,8 +117,8 @@
   position: absolute;
   bottom: 10px;
   right: 10px;
-  color: $white;
   font-size: 42px;
+  color: $white;
   z-index: 10;
 
   .hovered & {
@@ -151,10 +149,10 @@
   width: 320px;
 
   p {
-    color: $white;
     font-size: 13px;
     line-height: 16px;
     text-align: center;
+    color: $white;
 
     .disabled & {
       color: $yellow;

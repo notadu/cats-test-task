@@ -71,7 +71,7 @@ module.exports = {
         use: [{
           loader: 'file-loader',
           options: {
-            name: 'public/images/[name].[ext]'
+            name: 'static/images/[name].[ext]'
           }
         }]
       },
